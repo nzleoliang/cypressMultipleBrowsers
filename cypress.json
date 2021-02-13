@@ -1,0 +1,7 @@
+{
+  "env": {
+    "twitter_user_name": "leo.liang",
+    "twitter_password": "password"
+  },
+  "chromeWebSecurity":false
+}
