@@ -67,14 +67,14 @@ module.exports = (on, config) => {
       driver.findElement(By.name('session[username_or_email]')).sendKeys(username);
       driver.findElement(By.name('session[password]')).sendKeys(password);
       driver.findElement(By.xpath ('//*[contains(text(),"Log in")]')).click();
-
+      // you can do more interaction after a successful login
+      // e.g. submit a post on twitter.com
       return driver;
     }
   }),
   on('before:browser:launch', (browser = {}, launchOptions) => {
     if (browser.name === 'chrome') {
       launchOptions.args.push('--disable-extensions')
-
       return launchOptions
     }
   })  
